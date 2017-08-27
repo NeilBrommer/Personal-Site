@@ -1,0 +1,13 @@
+# Exclude dependency files
+bootstrap/*
+font-awesome/*
+js/jquery-3.2.1.js
+js/popper.js
+
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
