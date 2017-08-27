@@ -1,8 +1,12 @@
 # Exclude dependency files
+# Use .gitkeep to force git to keep the empty folders
 bootstrap/*
+!bootstrap/.gitkeep
 font-awesome/*
+!font-awesome/.gitkeep
 js/jquery-3.2.1.js
 js/popper.js
+!js/.gitkeep
 
 
 # Visual Studio Code
