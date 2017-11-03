@@ -15,3 +15,7 @@ js/popper.js
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+info\.php
+
+contact\.php

@@ -30,11 +30,10 @@ li.col-md-6 {
 	height: 100%;
 }
 
-iframe {
-	width: 100%;
-	min-width: 325px;
+.required {
+	color: red;
 }
 
-#foxyform_embed_link_892533 {
-	width: auto !important;
+.invalid-captcha {
+	box-shadow: 0 0 1.5px 1px red;
 }
