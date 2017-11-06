@@ -17,3 +17,5 @@ js/popper.js
 !.vscode/extensions.json
 
 info\.php
+
+PHPMailer/
