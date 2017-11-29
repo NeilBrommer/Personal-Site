@@ -1,13 +1,13 @@
 :root {
-	--main-color: #3f51b5;
+	--main-color: #3f51b5; /* R:63, G:82, B:181 */
 	--main-dark-color: #002984;
 	--main-light-color: #757de8;
 }
 
 body {
-	/*min-height: 2000px;*/
 	padding-top: 70px;
 	padding-bottom: 40px;
+	cursor: default;
 }
 
 .navbar, .fixed-top {
@@ -18,11 +18,11 @@ body {
 
 a:not(.nav-link):not(.navbar-brand) {
 	color: var(--main-color);
-	text-decoration: underline;
+	/*text-decoration: underline;*/
 }
 
-a:hover {
-	color: var(--main-light-color);
+a:hover:not(.nav-link):not(.navbar-brand) {
+	color: var(--main-light-color) !important;
 }
 
 li.col-md-6 {
@@ -33,16 +33,14 @@ li.col-md-6 {
 	text-align: center;
 }
 
-.cover-page {
-	background: url(../img/EWU_Campus_Pic.jpg) no-repeat center center fixed;
-	background-size: cover;
-	height: 100%;
-}
-
 .required {
 	color: red;
 }
 
 .invalid-captcha {
 	box-shadow: 0 0 1.5px 1px red;
+}
+
+.fa {
+	font-size: 0.85rem;
 }
