@@ -16,6 +16,15 @@ body {
 	border-bottom: var(--main-dark-color) 1px solid;
 }
 
+a:not(.nav-link):not(.navbar-brand) {
+	color: var(--main-color);
+	text-decoration: underline;
+}
+
+a:hover {
+	color: var(--main-light-color);
+}
+
 li.col-md-6 {
 	padding-left: 0px;
 }
