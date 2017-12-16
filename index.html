@@ -10,16 +10,28 @@
 	<title>Neil Brommer</title>
 	<meta name="description" content="Neil Brommer - Home Page">
 	<meta name="author" content="Neil Brommer">
-	<link rel="icon" href="favicon.ico">
+	<link rel="icon" href="/favicon.ico">
 
 	<!-- theme colors -->
-	<meta name="theme-color" content="#3f51b5"> <!-- Chrome, Firefox OS and Opera -->
-	<meta name="msapplication-navbutton-color" content="#3f51b5"> <!-- Windows Phone -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- iOS -->
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#3f51b5">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#3f51b5">
+	<!-- iOS -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap -->
-	<link href="font-awesome/css/font-awesome.css" rel="stylesheet"> <!-- font awesome -->
-	<link href="css/main.css" rel="stylesheet"> <!-- Custom styles for this site -->
+	<!-- Bootstrap -->
+	<link id="bootstrapStyle" href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+	<!-- font awesome -->
+	<script defer src="/lib/fontawesome/svg-with-js/js/fa-brands.js"></script>
+	<script defer src="/lib/fontawesome/svg-with-js/js/fa-regular.js"></script>
+	<script defer src="/lib/fontawesome/svg-with-js/js/fa-solid.js"></script>
+	<script src="/lib/fontawesome/svg-with-js/js/fontawesome.js"></script>
+
+	<!-- Custom styles for this site -->
+	<link href="css/main.css" rel="stylesheet">
 
 	<!-- Google Analytics -->
 	<script>
@@ -37,18 +49,27 @@
 </head>
 
 <body>
+	<!-- Bootstrap core JavaScript
+		================================================== -->
+	<!-- Placed at the top of document to allow theme to be set quickly -->
+	<script src="lib/jquery/jquery-3.2.1.js"></script>
+	<script src="lib/popper/popper.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+
+
 	<!-- Fixed navbar -->
 	<nav id="topnav" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 		<div class="container">
 			<a class="navbar-brand" href="/">Neil Brommer</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+			<button class="navbar-toggler mr-0 ml-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
 			 aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active" id="homelnk">
-						<a class="nav-link" href=".">Home</a>
+						<a class="nav-link" href="/">Home</a>
 					</li>
 					<li class="nav-item" id="resumelnk">
 						<a class="nav-link" href="resume.html">Resume</a>
@@ -59,15 +80,27 @@
 					<li class="nav-item" id="contactlnk">
 						<a class="nav-link" href="contact.html">Contact</a>
 					</li>
+				</ul>
+				<ul class="navbar-nav">
 					<li class="nav-item" id="githublnk">
-						<a class="nav-link" href="https://github.com/NeilBrommer" target="_blank">
-							GitHub <span class="fa fa-external-link"></span>
+						<a class="nav-link" href="https://github.com/NeilBrommer" target="_blank" title="GitHub">
+							<span class="fab fa-github-alt"></span>
 						</a>
+					</li>
+					<li class="nav-item ml-md-2">
+						<button id="btnTheme" type="button" class="btn btn-dark" aria-pressed="false" autocomplete="off">
+							<span id="themeText" class="fas fa-moon"></span>
+						</button>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
+
+	<!-- try to prevent flickering -->
+	<script>
+		checkTheme();
+	</script>
 
 
 	<div class="container">
@@ -78,6 +111,11 @@
 				<a href="https://www.ewu.edu/" target="_blank">Eastern Washington University</a>, graduating in spring 2018.
 			</p>
 		</div>
+
+		<!-- try to prevent flickering -->
+		<script>
+			checkTheme();
+		</script>
 
 		<div class="card-columns">
 			<div class="card">
@@ -114,7 +152,8 @@
 			<div class="card">
 				<h4 class="card-header">Resume</h4>
 				<div class="card-body">
-					<p>My <a href="resume.html">resume</a>
+					<p>My
+						<a href="resume.html">resume</a>
 					</p>
 					<p>Sensitive information has been removed from this public version</p>
 					<a class="card-link" href="NeilBrommer-WebResume.pdf">PDF</a>
@@ -122,15 +161,12 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- try to prevent flickering -->
+		<script>
+			checkTheme();
+		</script>
 	</div>
-
-
-	<!-- Bootstrap core JavaScript
-		================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="js/jquery-3.2.1.js"></script>
-	<script src="js/popper.js"></script>
-	<script src="bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 
