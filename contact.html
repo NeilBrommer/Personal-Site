@@ -87,6 +87,12 @@
 		</div>
 	</nav>
 
+	<!-- try to prevent flickering -->
+	<script>
+		checkTheme();
+	</script>
+
+
 	<!-- Main component for a primary marketing message or call to action -->
 	<div class="container">
 		<div class="jumbotron">
@@ -94,6 +100,11 @@
 
 			<div id="successAlert" class="alert alert-success" role="alert" style="display: none;">Message sent successfully!</div>
 			<div id="errorAlert" class="alert alert-danger" role="alert" style="display: none"></div>
+
+			<!-- try to prevent flickering -->
+			<script>
+				checkTheme();
+			</script>
 
 			<form id="contactForm">
 				<div class="form-group">
@@ -123,6 +134,11 @@
 				</div>
 				<button id="contactSubmit" type="submit" class="btn btn-primary">Submit</button>
 			</form>
+
+			<!-- try to prevent flickering -->
+			<script>
+				checkTheme();
+			</script>
 		</div>
 	</div>
 
