@@ -49,34 +49,41 @@ li.col-md-6 {
 	height: 100%;
 }
 
-.jumbo-dark {
+.dark-mode {
+	color: white;
+	background-color: #343a40;
+}
+
+.dark-mode .jumbotron {
 	background-color: #2b3136;
 }
 
-.a-dark {
+.dark-mode a:not(.navbar-brand):not(.nav-link) {
 	color: var(--main-light-color) !important;
 }
 
-.a-dark:hover {
+.dark-mode a:not(.navbar-brand):not(.nav-link):hover {
 	color: white !important;
 }
 
+.dark-mode .card {
+	background-color: #343a40;
+	border-color: rgba(255, 255, 255, 0.125);
+}
+
+.dark-mode .form-control {
+	background-color: rgb(81, 89, 107);
+	border-color: rgb(60, 66, 80);
+}
+
+.dark-mode .form-control:focus {
+	box-shadow: 0 0 0 .2rem rgba(255,255,255,.5);
+}
+
+/* for transitioning to/from dark mode */
 .transition {
 	-webkit-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.25s ease-in-out;
 	-moz-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.25s ease-in-out;
 	-o-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.25s ease-in-out;
 	transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.25s ease-in-out;
-}
-
-.card.bg-dark {
-	border-color: rgba(255, 255, 255, 0.125);
-}
-
-.dark.form-control {
-	background-color: rgb(81, 89, 107);
-	border-color: rgb(60, 66, 80);
-}
-
-.dark.form-control:focus {
-	box-shadow: 0 0 0 .2rem rgba(255,255,255,.5);
 }

@@ -1,6 +1,6 @@
 var theme = window.localStorage.getItem("theme");
 if (theme != null && theme == "true")
-	$("body").addClass("bg-dark");
+	$("body").addClass("dark-mode");
 
 $(document).ready(function () {
 	$("#btnTheme").click(function () {
@@ -22,16 +22,13 @@ function checkTheme() {
 }
 
 function transitionDark() {
-	$("body").addClass("transition bg-dark text-white");
-	$(".card").addClass("transition bg-dark text-white");
-	$(".jumbotron").addClass("transition jumbo-dark text-white");
-	$(".form-control").addClass("transition dark");
-	$("a:not(.navbar-brand):not(.nav-link)").addClass("transition a-dark");
+	$(".card").addClass("transition");
+	$(".jumbotron").addClass("transition");
+	$(".form-control").addClass("transition");
+	$("a:not(.navbar-brand):not(.nav-link)").addClass("transition");
+	$("body").addClass("transition dark-mode");
 
-	setInterval(function () {
-		$("a:not(.navbar-brand):not(.nav-link)").removeClass("transition");
-		$(".form-control").removeClass("transition");
-	}, 250);
+	setTimeout(endTransition, 250);
 
 	$("#btnTheme").removeClass("btn-dark").addClass("transition btn-light");
 	$("#themeText").replaceWith($("<span>").attr("id", "themeText").addClass("fas fa-sun"));
@@ -40,16 +37,13 @@ function transitionDark() {
 }
 
 function transitionLight() {
-	$("body").addClass("transition").removeClass("bg-dark text-white");
-	$(".card").addClass("transition").removeClass("bg-dark text-white");
-	$(".jumbotron").addClass("transition").removeClass("jumbo-dark text-white");
-	$(".form-control").addClass("transition").removeClass("dark");
-	$("a:not(.navbar-brand):not(.nav-link)").addClass("transition").removeClass("a-dark");
+	$(".card").addClass("transition");
+	$(".jumbotron").addClass("transition");
+	$(".form-control").addClass("transition");
+	$("a:not(.navbar-brand):not(.nav-link)").addClass("transition");
+	$("body").addClass("transition").removeClass("dark-mode");
 
-	setInterval(function () {
-		$("a:not(.navbar-brand):not(.nav-link)").removeClass("transition");
-		$(".form-control").removeClass("transition");
-	}, 500);
+	setTimeout(endTransition, 250);
 
 	$("#btnTheme").removeClass("btn-light").addClass("transition btn-dark");
 	$("#themeText").replaceWith($("<span>").attr("id", "themeText").addClass("fas fa-moon"));
@@ -57,12 +51,16 @@ function transitionLight() {
 	window.localStorage.setItem("theme", "false");
 }
 
+function endTransition() {
+	$("body").removeClass("transition");
+	$(".card").removeClass("transition");
+	$(".jumbotron").removeClass("transition");
+	$("a:not(.navbar-brand):not(.nav-link)").removeClass("transition");
+	$(".form-control").removeClass("transition");
+}
+
 function setDark() {
-	$("body").addClass("bg-dark text-white");
-	$(".card").addClass("bg-dark text-white");
-	$(".jumbotron").addClass("jumbo-dark text-white");
-	$(".form-control").addClass("dark");
-	$("a:not(.navbar-brand):not(.nav-link)").addClass("a-dark");
+	$("body").addClass("dark-mode");
 
 	$("#btnTheme").removeClass("btn-dark").addClass("btn-light");
 	$("#themeText").replaceWith($("<span>").attr("id", "themeText").addClass("fas fa-sun"));
