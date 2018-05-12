@@ -1,0 +1,10 @@
+{{ with .Get 0 }}
+{{ $cardData := getJSON . }}
+
+<div class="row">
+	{{ range $cardData }}
+		{{ partial "linkCard" . }}
+	{{ end }}
+</div>
+
+{{ end }}

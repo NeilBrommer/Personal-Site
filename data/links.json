@@ -1,0 +1,51 @@
+[
+	{
+		"title": "Principles of Lighting and Rendering with John Carmack at QuakeCon 2013",
+		"description": "John Carmack talking about various 3D rendering concepts.",
+		"URL": "https://www.youtube.com/watch?v=IyUgHPs86XM"
+	},
+	{
+		"title": "Why the Flash Crash Really Matters",
+		"description": "An article on the flash crash of 2010 and the <a href=\"https://en.wikipedia.org/wiki/High-frequency_trading\" target=\"_blank\">high-frequency trading</a> programs that caused it.",
+		"URL": "http://nautil.us/issue/23/dominoes/why-the-flash-crash-really-matters"
+	},
+	{
+		"title": "Algorithms and Bias: Q. and A. With Cynthia Dwork",
+		"description": "An interview with Cynthia Dwork of Microsoft Research on how algorithms show bias and where those biases come from.",
+		"URL": "https://www.nytimes.com/2015/08/11/upshot/algorithms-and-bias-q-and-a-with-cynthia-dwork.html?abt=0002&abg=1"
+	},
+	{
+		"title": "Origin of Quake3’s Fast InvSqrt() ",
+		"description": "An article on the inverse square root function in Quake 3 looking into how it works and its history.",
+		"URL": "https://www.beyond3d.com/content/articles/8/"
+	},
+	{
+		"title": "Real Time Rendering: An Overview for Artists",
+		"description": "A look at various aspects of real time 3D rendering, especially in video games.",
+		"URL": "https://jesshiderue4.wordpress.com/real-time-rendering-an-overview-for-artists/"
+	},
+	{
+		"title": "Entering the Quantum Era—How Firefox got fast again and where it’s going to get faster",
+		"description": "An article that looks at various architectural changes to Firefox in version 57 and changes planned for future versions.",
+		"URL": "https://hacks.mozilla.org/2017/11/entering-the-quantum-era-how-firefox-got-fast-again-and-where-its-going-to-get-faster/"
+	},
+	{
+		"title": "The whole web at maximum FPS: How WebRender gets rid of jank ",
+		"description": " An article that gives a high level description how Firefox’s new rendering engine works.",
+		"URL": "https://hacks.mozilla.org/2017/10/the-whole-web-at-maximum-fps-how-webrender-gets-rid-of-jank/"
+	},
+	{
+		"title": "Inside a super fast CSS engine: Quantum CSS (aka Stylo)",
+		"description": "A high level overview of how Firefox’s new CSS engine Stylo works.",
+		"URL": "https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/"
+	},
+	{
+		"title": "The Judge’s Code",
+		"description": "An article on Judge William Alsup, who was the judge for the first <a href=\"https://en.wikipedia.org/wiki/Oracle_America,_Inc._v._Google,_Inc.\" target=\"_blank\"> Oracle v. Google</a> case over whether an API can be copywritten, and is now the judge for the <a href=\"http://www.businessinsider.com/google-waymo-v-uber-case-explained-2017-5\" target=\"_blank\">Waymo (Google) v. Uber</a>."
+	},
+	{
+		"title": "Linkedin Dark Patterns",
+		"description": "An in depth blog post detailing how LinkedIn used dark patterns to trick users.",
+		"URL": "https://schlosser.io/writing/linkedin-dark-patterns/"
+	}
+]

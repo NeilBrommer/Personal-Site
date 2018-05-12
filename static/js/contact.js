@@ -26,7 +26,7 @@ function sendForm(e) {
 		var message = $("#messageField").val();
 
 		$.ajax({
-			url: "contact.php",
+			url: "../contact.php",
 			type: "POST",
 			data: {
 				"name": name,

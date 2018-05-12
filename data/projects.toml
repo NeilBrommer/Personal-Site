@@ -1,0 +1,59 @@
+[[project]]
+	title = "Snippets"
+	incomplete = true
+	description = "A web based tool for managing reusable pieces of code and useful programming resources"
+	[[project.links]]
+		title = "Web Client"
+		URL = "https://snippets.neilbrommer.com/"
+	[[project.links]]
+		title = "Documentation"
+		URL = "https://snippets.neilbrommer.com/documentation.html"
+	[[project.links]]
+		title = "Source Code"
+		URL = "https://github.com/NeilBrommer/SnippetManager"
+
+[[project]]
+	title = "Start"
+	incomplete = false
+	description = "A new tab page that displays lists of links using the browser's indexedDB to store all data"
+	[[project.links]]
+		title = "Site"
+		URL = "https://start.neilbrommer.com/"
+	[[project.links]]
+		title = "Source Code"
+		URL = "https://github.com/NeilBrommer/NewTabPage"
+
+[[project]]
+	title = "Picture Viewer"
+	incomplete = false
+	description = "A Windows program for viewing image files written using C# and WPF"
+	[[project.links]]
+		title = "Source Code"
+		URL = "https://github.com/NeilBrommer/PictureViewer"
+
+[[project]]
+	title = "Website"
+	incomplete = false
+	description = "The source code for this website"
+	[[project.links]]
+		title = "Source Code"
+		URL = "https://github.com/NeilBrommer/Personal-Site"
+
+[[project]]
+	title = "Resume"
+	incomplete = false
+	description = "My [Resume](resume)"
+	[[project.links]]
+		title = "PDF"
+		URL = "/NeilBrommer-WebResume.pdf"
+	[[project.links]]
+		title = "Source Code"
+		URL = "https://github.com/NeilBrommer/Resume"
+
+[[project]]
+	title = "Auto Dark"
+	incomplete = false
+	description = "A small utility for setting/toggling the Windows 10 dark theme. Useful in combination with the Windows Task Scheduler to automatically change the theme."
+	[[project.links]]
+		title = "Source Code"
+		URL = "https://github.com/NeilBrommer/WindowsAutoDark"

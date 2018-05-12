@@ -1,0 +1,20 @@
+<div class="card">
+	<h4 class="card-header">{{ .title }}</h4>
+	<div class="card-body">
+		{{ if .incomplete }}
+			<p class="text-danger"><small>Incomplete</small></p>
+		{{ end }}
+
+		{{ if isset . "description" }}
+			<p>{{ .description | markdownify }}</p>
+		{{ end }}
+
+		{{ if isset . "links" }}
+			{{ range .links }}
+				<a class="card-link" href="{{ .URL }}" target="_blank">
+					{{ .title }}
+				</a>
+			{{ end }}
+		{{ end }}
+	</div>
+</div>

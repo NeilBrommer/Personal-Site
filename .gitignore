@@ -1,25 +1,4 @@
-# Exclude dependency files
-# Use .gitkeep to force git to keep the empty folders
-bootstrap/*
-!bootstrap/.gitkeep
-font-awesome/*
-!font-awesome/.gitkeep
-js/jquery-3.2.1.js
-js/popper.js
-!js/.gitkeep
-
-
-# Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
-info\.php
-
-PHPMailer/
-
-\.vscode/
-
-lib/
+static/lib/
+static/info.php
+.vscode/
+public/
