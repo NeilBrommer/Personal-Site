@@ -1,4 +1,13 @@
 [[project]]
+	title = "Growing Neighbors"
+	incomplete = false
+	description = "The website for the Growing Neighbors organization in Spokane, WA. I worked as part of a team building this site."
+	[[project.links]]
+		title = "Site"
+		external = true
+		URL = "https://growingneighbors.org/"
+
+[[project]]
 	title = "Snippets"
 	incomplete = true
 	description = "A web based tool for managing reusable pieces of code and useful programming resources"
