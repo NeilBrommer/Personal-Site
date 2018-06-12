@@ -8,4 +8,4 @@ draft = false
 	weight = -100
 +++
 
-Computer Science student at [Eastern Washington University](https://www.ewu.edu/), graduating in spring 2018.
+Computer Science student at <a href="https://www.ewu.edu/" target="_blank">Eastern Washington University</a>, graduating in spring 2018.

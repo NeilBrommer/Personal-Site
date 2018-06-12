@@ -2,6 +2,7 @@
 	--main-color: #3f51b5; /* R:63, G:82, B:181 */
 	--main-dark-color: #002984;
 	--main-light-color: #757de8;
+	--accent-color: #FFC107;
 }
 
 body {
