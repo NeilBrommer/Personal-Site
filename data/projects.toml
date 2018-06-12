@@ -4,12 +4,15 @@
 	description = "A web based tool for managing reusable pieces of code and useful programming resources"
 	[[project.links]]
 		title = "Web Client"
+		external = true
 		URL = "https://snippets.neilbrommer.com/"
 	[[project.links]]
 		title = "Documentation"
+		external = true
 		URL = "https://snippets.neilbrommer.com/documentation.html"
 	[[project.links]]
 		title = "Source Code"
+		external = true
 		URL = "https://github.com/NeilBrommer/SnippetManager"
 
 [[project]]
@@ -18,9 +21,11 @@
 	description = "A new tab page that displays lists of links using the browser's indexedDB to store all data"
 	[[project.links]]
 		title = "Site"
+		external = true
 		URL = "https://start.neilbrommer.com/"
 	[[project.links]]
 		title = "Source Code"
+		external = true
 		URL = "https://github.com/NeilBrommer/NewTabPage"
 
 [[project]]
@@ -29,6 +34,7 @@
 	description = "A Windows program for viewing image files written using C# and WPF"
 	[[project.links]]
 		title = "Source Code"
+		external = true
 		URL = "https://github.com/NeilBrommer/PictureViewer"
 
 [[project]]
@@ -37,6 +43,7 @@
 	description = "The source code for this website"
 	[[project.links]]
 		title = "Source Code"
+		external = true
 		URL = "https://github.com/NeilBrommer/Personal-Site"
 
 [[project]]
@@ -45,9 +52,11 @@
 	description = "My [Resume](resume)"
 	[[project.links]]
 		title = "PDF"
+		external = true
 		URL = "/NeilBrommer-WebResume.pdf"
 	[[project.links]]
 		title = "Source Code"
+		external = true
 		URL = "https://github.com/NeilBrommer/Resume"
 
 [[project]]
@@ -56,4 +65,5 @@
 	description = "A small utility for setting/toggling the Windows 10 dark theme. Useful in combination with the Windows Task Scheduler to automatically change the theme."
 	[[project.links]]
 		title = "Source Code"
+		external = true
 		URL = "https://github.com/NeilBrommer/WindowsAutoDark"
