@@ -14,4 +14,4 @@ draft = false
 	</p>
 </div>
 
-{{< linkCardList "data/links.json" >}}
+{{< linkCardList >}}

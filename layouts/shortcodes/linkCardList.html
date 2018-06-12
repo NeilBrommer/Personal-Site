@@ -1,8 +1,7 @@
-{{ with .Get 0 }}
-{{ $cardData := getJSON . }}
+{{ with $.Site.Data.links }}
 
 <div class="card-columns">
-	{{ range $cardData }}
+	{{ range .link }}
 		{{ partial "linkCard" . }}
 	{{ end }}
 </div>
