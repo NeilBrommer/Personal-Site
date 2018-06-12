@@ -1,5 +1,10 @@
 [
 	{
+		"title": "Ok→Cancel versus Cancel→Ok",
+		"description": "A look at button ordering in GUIs from the Factorio blog",
+		"URL": "https://www.factorio.com/blog/post/fff-246"
+	},
+	{
 		"title": "Principles of Lighting and Rendering with John Carmack at QuakeCon 2013",
 		"description": "John Carmack talking about various 3D rendering concepts.",
 		"URL": "https://www.youtube.com/watch?v=IyUgHPs86XM"
