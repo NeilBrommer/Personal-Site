@@ -11,12 +11,23 @@ body {
 	cursor: default;
 }
 
-.navbar, .fixed-top {
+.navbar.fixed-top {
+	padding-top: 0;
+	padding-bottom: 0;
 	background-color: #3f51b5 !important;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 	border-bottom: #002984 1px solid;
 }
 
+.nav-item {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.navbar-nav .nav-item.active {
+	padding-bottom: 0.25rem;
+	border-bottom: white 0.25rem solid;
+}
 a:not(.nav-link):not(.navbar-brand) {
 	color: #3f51b5;
 }
