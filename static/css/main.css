@@ -24,14 +24,32 @@ body {
 	padding-bottom: 0.5rem;
 }
 
-.navbar-nav .nav-item.active {
-	padding-bottom: 0.25rem;
-	border-bottom: white 0.25rem solid;
+@media screen and (min-width: 768px) {
+	.navbar-nav .nav-item.active {
+		padding-bottom: 0.25rem;
+		border-bottom: white 0.25rem solid;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.navbar-nav .nav-item.active {
+		padding-left: 0.75rem;
+		border-left: white 0.25rem solid;
+	}
+
+	.navbar-nav .nav-item {
+		padding-left: 1rem;
+	}
+}
+
+.navbar {
+	padding-left: 0;
 }
 
 .navbar .navbar-brand {
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
+	padding-left: 1rem;
 }
 
 .card, .jumbotron {
