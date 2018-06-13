@@ -29,6 +29,11 @@ body {
 	border-bottom: white 0.25rem solid;
 }
 
+.navbar .navbar-brand {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
 .card, .jumbotron {
 	box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
