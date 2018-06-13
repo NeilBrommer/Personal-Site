@@ -11,8 +11,8 @@
 				{{ $currentPage := . }}
 				{{ range .Site.Menus.main }}
 				<li class="nav-item {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">
-						<a class="nav-link" href="{{ .URL }}">{{.Title}}</a>
-					</li>
+					<a class="nav-link" href="{{ .URL }}">{{.Title}}</a>
+				</li>
 				{{ end }}
 
 			</ul>
