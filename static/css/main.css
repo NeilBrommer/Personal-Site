@@ -1,8 +1,8 @@
 :root {
-	--main-color: #3f51b5; /* R:63, G:82, B:181 */
-	--main-dark-color: #002984;
-	--main-light-color: #757de8;
-	--accent-color: #FFC107;
+	--main-color: #3f51b5;       /* R:63,  G:82,  B:181 */
+	--main-dark-color: #002984;  /* R:0,   G:41,  B:132 */
+	--main-light-color: #757de8; /* R:117, G:125, B:232 */
+	--accent-color: #FFC107;     /* R:255, G:193, B:7   */
 }
 
 body {
@@ -29,6 +29,10 @@ body {
 		padding-bottom: 0.25rem;
 		border-bottom: white 0.25rem solid;
 	}
+
+	#btnTheme {
+		margin-left: 0.5rem;
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -39,6 +43,14 @@ body {
 
 	.navbar-nav .nav-item {
 		padding-left: 1rem;
+	}
+
+	#social-menu {
+		flex-direction: row;
+	}
+
+	#social-menu .nav-item:not(:first-child) {
+		padding-left: 2rem;
 	}
 }
 

@@ -17,7 +17,7 @@
 
 			</ul>
 
-			<ul class="navbar-nav">
+			<ul id="social-menu" class="navbar-nav">
 				{{ with .Site.Data.social }}
 					{{ with .github }}
 					<li class="nav-item">
@@ -35,7 +35,7 @@
 					{{ end }}
 				{{ end }}
 
-				<li class="nav-item ml-md-2">
+				<li class="nav-item ml-auto">
 					<button id="btnTheme" type="button" class="btn btn-dark" aria-pressed="false" autocomplete="off">
 						<span id="themeText" class="fas fa-moon"></span>
 					</button>
