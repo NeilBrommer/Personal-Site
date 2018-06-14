@@ -5,6 +5,16 @@
 	{{ partial "navbar" .}}
 
 	<div class="container">
+		{{ if isset .Params "description" }}
+			<div class="jumbotron">
+				<h1 class="display-4 mb-4">{{ .Title }}</h1>
+
+				{{ .Params.description | markdownify }}
+			</div>
+		{{ else }}
+			<h1 class="display-4 mb-4">{{ .Title }}</h1>
+		{{ end }}
+
 		{{.Content}}
 	</div>
 </body>

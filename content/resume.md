@@ -2,22 +2,14 @@
 title = "Resume"
 date = 2018-05-12T11:48:46-07:00
 draft = false
+description = """
+References and more contact information available on request via the [contact page](/contact).
+
+PDF version available [here](/NeilBrommer-WebResume.pdf)"""
 [menu]
 	[menu.main]
 	weight = -90
 +++
-
-<div class="jumbotron">
-	<h1>Resume</h1>
-	<p>
-		Work history, references, and more contact information available on request via the
-		<a href="contact.html">contact page</a>.
-	</p>
-	<p>
-		PDF version available
-		<a href="NeilBrommer-WebResume.pdf">here</a>.
-	</p>
-</div>
 
 <h2>Education</h2>
 <p>

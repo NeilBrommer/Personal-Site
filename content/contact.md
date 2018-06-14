@@ -7,22 +7,19 @@ draft = false
 	weight = -70
 +++
 
-<div class="jumbotron">
-<h1>Contact</h1>
-
 <div id="successAlert" class="alert alert-success" role="alert" style="display: none;">Message sent successfully!</div>
 <div id="errorAlert" class="alert alert-danger" role="alert" style="display: none"></div>
 
-<form id="contactForm">
+<form id="contactForm" class="border rounded bg-light p-1 p-sm-4">
 	<div class="form-group">
 		<label for="nameField">Name
-			<span class="required">\*</span>
+			<span class="required">*</span>
 		</label>
 		<input id="nameField" type="text" required="required" class="form-control">
 	</div>
 	<div class="form-group">
 		<label for="emailField">Email Address
-			<span class="required">\*</span>
+			<span class="required">*</span>
 		</label>
 		<input id="emailField" type="email" required="required" class="form-control">
 	</div>
@@ -32,7 +29,7 @@ draft = false
 	</div>
 	<div class="form-group">
 		<label for="messageField">Message
-			<span class="required">\*</span>
+			<span class="required">*</span>
 		</label>
 		<textarea id="messageField" rows="5" required="required" class="form-control"></textarea>
 	</div>
@@ -41,7 +38,6 @@ draft = false
 	</div>
 	<button id="contactSubmit" type="submit" class="btn btn-primary">Submit</button>
 </form>
-</div>
 
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
