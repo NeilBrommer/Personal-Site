@@ -37,7 +37,7 @@ draft = false
 			<i class="float-sm-right">2014 &ndash; present</i>
 		</div>
 	</div>
-	Planning to graduate in spring 2018
+	Graduating in spring 2018
 </p>
 <p>
 	<div class="row">
@@ -59,22 +59,21 @@ draft = false
 	Networking with Cisco switches and routers, with basic Windows and Linux administration
 </p>
 
-<h2>Relevant Coursework</h2>
+<h2>Relevant Coursework and Skills</h2>
 <ul class="row">
-	<li class="col-md-6">Object Oriented Programming &ndash; Java, C#</li>
+	<li class="col-md-6">Object-Oriented Languages &ndash; Java, C\#, C++</li>
 	<li class="col-md-6">Object-Oriented design patterns</li>
 	<li class="col-md-6">GUI Programming &ndash; JavaFX, WinForms, WPF</li>
-	<li class="col-md-6">Relational Databases &ndash; SQL</li>
-	<li class="col-md-6">Web Development &ndash; HTML, CSS, JavaScript, JQuery, PHP, WordPress</li>
+	<li class="col-md-6">Relational Databases &ndash; SQL, database design</li>
+	<li class="col-md-6">Web Development &ndash; HTML, CSS, JavaScript, JQuery, PHP, REST APIs</li>
 	<li class="col-md-6">Operating Systems &ndash; C, Unix, threads and processes, memory management</li>
 	<li class="col-md-6">Software Engineering</li>
-	<li class="col-md-6">Digital Circuits &ndash; Digital logic</li>
+	<li class="col-md-6">Data Mining</li>
 	<li class="col-md-6">Network Programming &ndash; Network sockets, binary protocols</li>
+	<li class="col-md-6">Low Level Systems &ndash; MIPS assembly, digital circuits</li>
 	<li class="col-md-6">Network Administration &ndash; routing, switching, WAN, VoIP</li>
 	<li class="col-md-6">Linux Administration &ndash; Basic system maintenance, Email, DNS</li>
 	<li class="col-md-6">Windows Administration &ndash; MS Exchange, Active Directory</li>
-	<li class="col-md-6">Low Level Systems &ndash; MIPS assembly, digital circuits</li>
-	<li class="col-md-6">PC/Server Hardware</li>
 </ul>
 
 <h2>Certifications</h2>
