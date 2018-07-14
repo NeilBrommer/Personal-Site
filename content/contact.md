@@ -10,7 +10,7 @@ draft = false
 <div id="successAlert" class="alert alert-success" role="alert" style="display: none;">Message sent successfully!</div>
 <div id="errorAlert" class="alert alert-danger" role="alert" style="display: none"></div>
 
-<form id="contactForm" class="border rounded bg-light p-1 p-sm-4">
+<form id="contactForm" class="jumbotron border rounded p-1 p-sm-4">
 	<div class="form-group">
 		<label for="nameField">Name
 			<span class="required">*</span>
