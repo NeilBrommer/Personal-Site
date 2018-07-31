@@ -7,7 +7,7 @@
 	<div class="container">
 		{{ if isset .Params "description" }}
 			<div class="jumbotron">
-				<h1 class="display-4 mb-4">{{ .Title }}</h1>
+				<h1 id="title" class="display-4 mb-4">{{ .Title }}</h1>
 
 				{{ .Params.description | markdownify }}
 			</div>

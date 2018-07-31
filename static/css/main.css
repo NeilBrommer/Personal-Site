@@ -68,6 +68,13 @@ body {
 	box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
+h1:not(.card-header):not(#title), h2:not(.card-header), h3:not(.card-header), h4:not(.card-header), h5:not(.card-header), h6:not(.card-header) {
+	margin-top: 30px;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 a:not(.nav-link):not(.navbar-brand) {
 	color: #3f51b5;
 }
