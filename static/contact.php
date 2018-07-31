@@ -1,13 +1,10 @@
 <?php
-// on bluehost only
-ini_set("include_path", '/home2/neilbrom/php:' . ini_get("include_path") );
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer/Exception.php';
-require 'PHPMailer/PHPMailer.php';
-require 'PHPMailer/SMTP.php';
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
 
 include_once "info.php";
 
