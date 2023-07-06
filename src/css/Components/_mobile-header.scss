@@ -1,0 +1,43 @@
+@use 'variables';
+
+h1 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	font-size: 2rem;
+}
+
+.sidebar-toggle {
+	font-size: 2rem;
+
+	appearance: none;
+	cursor: pointer;
+	color: inherit;
+	background-color: var(--background-color);
+	border: solid 1px var(--primary-border-color);
+	border-radius: var(--main-border-radius);
+
+	display: flex;
+	align-items: center;
+	padding: 0.25em;
+	margin: 0.25em;
+
+	transition: background-color 200ms ease, color 200ms ease;
+
+	&:hover, &focus {
+		color: var(--primary-color);
+		background-color: var(--nav-hover-background);
+	}
+
+	&:active {
+		background-color: var(--primary-light-color);
+	}
+
+	@media (min-width: #{variables.$sidebar-breakpoint}) {
+		display: none;
+	}
+}
+
+

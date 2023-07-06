@@ -1,0 +1,46 @@
+@use '_variables';
+
+.card {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	border: solid 1px var(--primary-border-color);
+	border-radius: var(--main-border-radius);
+
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: 0;
+	}
+
+	.card-links {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 0.5em;
+		margin: auto -1rem -1rem -1rem;
+		padding: 0.5rem;
+		border-top: solid 1px var(--primary-border-color);
+		list-style: none;
+
+		li a {
+			display: inline-block;
+			padding: 0.5em 1em;
+			text-decoration: none;
+			border-radius: var(--main-border-radius);
+			transition: background-color 200ms ease;
+
+			&:hover, &:focus {
+				background-color: var(--nav-hover-background);
+
+				@media (prefers-reduced-motion: reduce) {
+					background-color: transparent;
+				}
+			}
+
+			@media (prefers-contrast: more),
+				(prefers-reduced-motion: reduce) {
+				text-decoration: underline;
+			}
+		}
+	}
+}

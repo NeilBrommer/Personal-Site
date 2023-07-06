@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Neil Brommer">
+	<meta name="description" content="The personal website of Neil Brommer">
+
+	<title>
+		{% if (title is defined) and (page.url != "/") %}
+			{{ title }} - Neil Brommer
+		{% else %}
+			Neil Brommer
+		{% endif %}
+	</title>
+
+	<link rel="stylesheet" href="{{ '/css/site.css' | url }}">
+</head>
+<body>
+	<header>
+		<nav class="navbar" aria-label="Main Menu">
+			<ul class="siteNav">
+				{% for section in collections.MainPage | filterDrafts | eleventyNavigation %}
+					<li {% if section.url == page.url %}class="active"{% endif %}>
+						<a href="/#{{ section.title | slugify }}">
+							{% if section.icon is defined %}
+								<svg class="bi" fill="currentColor" role="img">
+									<use xlink:href="/images/fontawesome/solid.svg#{{ section.icon }}" />
+								</svg>
+							{% endif %}
+							{{ section.title }}
+						</a>
+					</li>
+				{% endfor %}
+
+				{% set standalonePages = collections.all | filterDrafts | IsNotMainPageSection | eleventyNavigation %}
+
+				{% if standalonePages | length %}
+					<li><hr /></li>
+
+					{% for standalonePage in standalonePages %}
+						<li {% if standalonePage.url == page.url %}class="active"{% endif %}>
+							<a href="{{ standalonePage.url }}">
+								{% if standalonePage.icon is defined %}
+									<svg class="bi" fill="currentColor" role="img">
+										<use xlink:href="/images/fontawesome/solid.svg#{{ standalonePage.icon }}" />
+									</svg>
+								{% endif %}
+
+								{{ standalonePage.title }}
+							</a>
+						</li>
+					{% endfor %}
+				{% endif %}
+			</ul>
+
+			<ul class="externalNav">
+				{% for externalLink in socialLinks %}
+					<li>
+						<a href="{{ externalLink.url }}" title="{{ externalLink.name }}">
+							<svg class="bi" fill="currentColor" role="img">
+								<use xlink:href="/images/fontawesome/brands.svg#{{ externalLink.icon }}" />
+							</svg>
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<h1 id="{{ title | slugify }}">
+			{{ title }}
+
+			<button class="sidebar-toggle" onclick="setSidebar()">
+				<svg class="bi" fill="currentColor" role="img" aria-label="Toggle Main Menu">
+					<use xlink:href="/images/bootstrap-icons.svg#layout-sidebar-inset" />
+				</svg>
+			</button>
+		</h1>
+
+		{{ content | safe }}
+	</main>
+
+	<script type="text/javascript" src="/js/site.js"></script>
+</body>
+</html>

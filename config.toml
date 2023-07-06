@@ -1,6 +1,0 @@
-languageCode = "en-us"
-title = "Neil Brommer"
-baseURL = "https://neilbrommer.com/"
-enableGitInfo = true
-enableRobotsTXT = true
-googleAnalytics = "UA-105178749-1"

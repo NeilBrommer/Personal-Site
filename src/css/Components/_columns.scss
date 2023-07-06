@@ -1,0 +1,61 @@
+@use '_variables';
+
+:root {
+	--column-spacing: 1.5em;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--column-spacing);
+
+	.col {
+		flex: 0 0 100%;
+
+		// Default to md
+		@media (min-width: #{variables.$size-md}) {
+			flex: 1;
+		}
+	}
+}
+
+@mixin row($name, $breakpoint) {
+	.row-#{$name} {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		gap: var(--column-spacing);
+
+		.col {
+			flex: 0 0 100%;
+
+			@media (min-width: #{$breakpoint}) {
+				flex: 1;
+			}
+		}
+	}
+
+	@for $i from 1 through 12 {
+		.row-#{$name}-#{$i} {
+			display: flex;
+			flex-wrap: wrap;
+			gap: var(--column-spacing);
+
+			.col {
+				flex: 0 0 100%;
+
+				@media (min-width: #{$breakpoint}) {
+					// Even width filling the whole row accounting for gap
+					flex: 0 0 calc((100% / #{$i}) - (var(--column-spacing) / #{$i} * (#{$i} - 1)));
+				}
+			}
+		}
+	}
+}
+
+@include row("xs", #{variables.$size-xs});
+@include row("sm", #{variables.$size-sm});
+@include row("md", #{variables.$size-md});
+@include row("lg", #{variables.$size-lg});
+@include row("xl", #{variables.$size-xl});
+@include row("2x", #{variables.$size-2x});

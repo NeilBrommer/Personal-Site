@@ -1,0 +1,117 @@
+@use 'sass:color';
+@use '_variables';
+
+header {
+	position: fixed;
+	top: 0;
+	left: calc((var(--sidebar-width) + 2rem) * -1);
+	height: calc(100dvh - 2rem); // Account for margin
+	margin: 1rem;
+
+	border: solid 1px var(--primary-border-color);
+	border-radius: var(--main-border-radius);
+	background-color: rgba(var(--background-color-components), 0.5);
+	backdrop-filter: blur(10px);
+
+	// Goes slightly past the end, then bounces back to the final position
+	transition: left 250ms cubic-bezier(.44,1.36,.74,.97);
+
+	@media (prefers-reduced-motion: reduce) {
+		transition: none;
+	}
+
+	@media (prefers-contrast: more) {
+		backdrop-filter: none;
+		background-color: var(--background-color);
+	}
+
+	&[aria-hidden="false"] {
+		left: 0;
+	}
+
+	@media (min-width: #{variables.$sidebar-breakpoint}) {
+		// Always show the sidebar on larger screens
+		position: sticky;
+		left: unset;
+		height: 100dvh;
+		margin: 0;
+
+		border: none;
+		background-color: unset;
+		backdrop-filter: none;
+	}
+}
+
+nav.navbar {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	width: var(--sidebar-width);
+	height: 100%;
+	padding: 1rem;
+	overflow: scroll;
+
+	ul {
+		display: flex;
+		list-style: none;
+		padding-left: 0;
+
+		li {
+			margin-bottom: 0;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	ul.siteNav {
+		flex-direction: column;
+		justify-items: flex-start;
+		gap: 0.5em;
+
+		li {
+			a {
+				// Use flex to correct icon alignment
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				column-gap: 0.5em;
+				width: 100%;
+				padding: 0.75em;
+				color: var(--nav-link-color);
+				border-radius: var(--main-border-radius);
+
+				transition: background-color 200ms ease;
+			}
+
+			&.active a {
+				background-color: var(--nav-active-background);
+			}
+
+			&:not(.active) a:hover, &:not(.active) a:focus {
+				background-color: var(--nav-hover-background);
+
+				@media (prefers-reduced-motion: reduce) {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+
+	ul.externalNav {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.5em;
+
+		li {
+			a {
+				display: inline-block;
+				padding: 0 0.75em;
+				color: var(--nav-link-color);
+			}
+		}
+	}
+}

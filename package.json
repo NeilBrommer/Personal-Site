@@ -1,0 +1,25 @@
+{
+  "name": "websiterewrite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "npx @11ty/eleventy --serve",
+    "start": "open http://localhost:8080 & npm run watch",
+    "build": "npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "eleventy-sass": "^2.2.3",
+    "markdown-it-deflist": "^2.1.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "bootstrap-icons": "^1.10.5",
+    "normalize.css": "^8.0.1"
+  }
+}

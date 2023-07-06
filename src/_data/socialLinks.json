@@ -1,0 +1,17 @@
+[
+	{
+		"name": "GitHub",
+		"icon": "github",
+		"url": "https://github.com/NeilBrommer"
+	},
+	{
+		"name": "CodePen",
+		"icon": "codepen",
+		"url": "https://codepen.io/NeilBrommer"
+	},
+	{
+		"name": "LinkedIn",
+		"icon": "linkedin",
+		"url": "https://www.linkedin.com/in/neilbrommer/"
+	}
+]

@@ -1,0 +1,18 @@
+---
+title: Neil Brommer
+eleventyNavigation:
+  key: Neil Brommer
+  icon: house
+  order: 0
+tags: [ "MainPage" ]
+---
+
+{% for section in collections.MainPage | filterDrafts | IsNotPage(page.url) | IsMainPageSection | orderBySectionOrder %}
+	{% if not loop.first %}
+		<h2 id="{{ section.data.title | slugify }}">{{ section.data.title }}</h2>
+	{% endif %}
+
+	<section>
+		{{ section.templateContent | safe }}
+	</section>
+{% endfor %}

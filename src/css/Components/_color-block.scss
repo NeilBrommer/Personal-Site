@@ -1,0 +1,22 @@
+@use '_variables';
+
+.color-blocks {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.color-block {
+	flex: 1 1 0;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	white-space: nowrap;
+	border: solid 1px var(--primary-border-color);
+	border-radius: var(--main-border-radius);
+	padding: 0.5em;
+}

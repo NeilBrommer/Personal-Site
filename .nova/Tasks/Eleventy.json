@@ -1,0 +1,21 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "npm install\nnpm run build"
+    },
+    "clean" : {
+      "enabled" : true,
+      "script" : "rm -r _site\nnpm clean-install"
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "npm install\nnpm start"
+    }
+  },
+  "environment" : {
+    "BUILD_DRAFTS" : "false"
+  },
+  "openLogOnRun" : "fail",
+  "persistent" : true
+}

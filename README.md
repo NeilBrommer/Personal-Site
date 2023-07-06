@@ -1,5 +1,5 @@
-# Personal Website
+# Personal Site
 
-The files for my personal site at [neilbrommer.com](https://neilbrommer.com).
+The source for my personal website at [neilbrommer.com](https://neilbrommer.com).
 
-Built using [Hugo](https://gohugo.io/), [Bootstrap 4](https://getbootstrap.com/) and [FontAwesome 5](https://fontawesome.com/).
+Built using [11ty](https://www.11ty.dev/).

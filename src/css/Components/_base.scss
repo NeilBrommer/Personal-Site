@@ -1,0 +1,71 @@
+@use '_variables';
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+
+	@media (prefers-reduced-motion: reduce) {
+		scroll-behavior: auto;
+	}
+}
+
+body {
+	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+		"Helvetica Neue", sans-serif;
+	line-height: 1.5;
+	color: var(--text-color);
+	background-color: var(--background-color);
+	accent-color: var(--primary-color);
+
+	@media (min-width: #{variables.$sidebar-breakpoint}) {
+		display: flex;
+		gap: 2rem;
+	}
+}
+
+header {
+	height: 100dvh;
+	flex: 0 0 var(--sidebar-width);
+}
+
+main {
+	width: 100%;
+	max-width: 70em;
+	padding: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a {
+	color: var(--primary-color);
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.25em;
+	text-decoration-color: transparent;
+	transition: text-decoration-color 200ms ease;
+
+	&:hover,
+	&:active {
+		text-decoration-color: var(--primary-color);
+	}
+
+	@media (prefers-contrast: more) {
+		color: var(--primary-color-dark);
+		text-decoration-color: var(--primary-color);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		text-decoration-color: var(--primary-color);
+	}
+}
+
+hr {
+	border: none;
+	height: 1px;
+	background-color: var(--primary-border-color);
+}

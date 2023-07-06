@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Start",
+    "description": "A new tab page that displays lists of links using the browser’s indexedDB to store all data",
+    "links": [
+      {
+        "title": "Site",
+        "url": "https://start.neilbrommer.com/"
+      },
+      {
+        "title": "Source Code",
+        "url": "https://github.com/NeilBrommer/NewTabPage"
+      }
+    ]
+  },
+  {
+    "name": "Blazor Start",
+    "description": "A work in progress rewrite of the Start project using Blazor WebAssembly",
+    "links": [
+      {
+        "title": "Source Code",
+        "url": "https://github.com/NeilBrommer/BlazorStart"
+      }
+    ]
+  },
+  {
+    "name": "Website",
+    "description": "The source code for this website",
+    "links": [
+      {
+        "title": "Source Code",
+        "url": "https://github.com/NeilBrommer/Personal-Site"
+      }
+    ]
+  },
+  {
+    "name": "Auto Dark",
+    "description": "A small utility for setting/toggling the Windows 10 dark theme. Useful in combination with the Windows Task Scheduler to automatically change the theme.",
+    "links": [
+      {
+        "title": "Source Code",
+        "url": "https://github.com/NeilBrommer/WindowsAutoDark"
+      }
+    ]
+  }
+]
