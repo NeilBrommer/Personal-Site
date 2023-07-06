@@ -11,6 +11,7 @@ header {
 	border: solid 1px var(--primary-border-color);
 	border-radius: var(--main-border-radius);
 	background-color: rgba(var(--background-color-components), 0.5);
+	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 
 	// Goes slightly past the end, then bounces back to the final position
@@ -21,6 +22,7 @@ header {
 	}
 
 	@media (prefers-contrast: more) {
+		-webkit-backdrop-filter: none;
 		backdrop-filter: none;
 		background-color: var(--background-color);
 	}
