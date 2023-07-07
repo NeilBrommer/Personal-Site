@@ -36,10 +36,12 @@
 				{% set standalonePages = collections.all | filterDrafts | IsNotMainPageSection | eleventyNavigation %}
 
 				{% if standalonePages | length %}
+
 					<li><hr /></li>
 
 					{% for standalonePage in standalonePages %}
-						<li {% if standalonePage.url == page.url %}class="active"{% endif %}>
+						{# select the page on sub-pages #}
+						<li {% if page.url and page.url.startsWith(standalonePage.url) %}class="active"{% endif %}>
 							<a href="{{ standalonePage.url }}">
 								{% if standalonePage.icon is defined %}
 									<svg class="bi" fill="currentColor" role="img">

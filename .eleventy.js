@@ -27,7 +27,18 @@ module.exports = function (eleventyConfig) {
 		return collection.filter(item => !item.url || item.url.startsWith("/_sections"));
 	});
 	eleventyConfig.addFilter("IsNotMainPageSection", (collection) => {
-		return collection.filter(item => item.url != null && (item.data.tags == null || !item.data.tags.includes("MainPage")));
+		return collection.filter(item => {
+			if (item.url == null || item.url == false)
+				return false;
+
+			if (item.data.tags == null)
+				return true;
+
+			if (item.data.tags.includes("MainPage"))
+				return false;
+
+			return true;
+		});
 	});
 	eleventyConfig.addFilter("orderBySectionOrder", (collection) =>
 		collection.sort((a, b) => a.data.sectionOrder - b.data.sectionOrder)
@@ -40,8 +51,6 @@ module.exports = function (eleventyConfig) {
 		}
 
 		return collection.filter(item => {
-			console.log(item);
-
 			if (item.data.draft != null) {
 				return !item.data.draft;
 			}
@@ -50,8 +59,6 @@ module.exports = function (eleventyConfig) {
 		});
 	});
 	eleventyConfig.addFilter("log", (value) => console.log(value));
-
-	console.log("BUILD_DRAFTS: " + process.env.BUILD_DRAFTS);
 
 	return {
 		dir: {
