@@ -25,6 +25,7 @@ body {
 	@media (min-width: #{variables.$sidebar-breakpoint}) {
 		display: flex;
 		gap: 2rem;
+		justify-content: center;
 	}
 }
 
@@ -38,8 +39,6 @@ main {
 	min-width: 0px;
 	max-width: 70em;
 	padding: 2rem;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 a {
