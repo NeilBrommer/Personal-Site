@@ -1,0 +1,19 @@
+---
+layout: layouts/layout.njk
+---
+
+<dl class="tags">
+	<dt>
+		<svg class="icon">
+			<use href="/images/feather-sprite.svg#tag" />
+		</svg>
+		Tags
+	</dt>
+	{% for tag in tags %}
+		{% if tag != "posts" %}
+			<dd>{{ tag }}</dd>
+		{% endif %}
+	{% endfor %}
+</dl>
+
+{{ content | safe }}

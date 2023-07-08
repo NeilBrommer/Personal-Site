@@ -16,3 +16,17 @@ dl {
 		margin-inline-start: 1em;
 	}
 }
+
+dl.tags {
+	dt {
+		display: inline-flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 0.25em;
+		padding: 0.25em 0;
+	}
+
+	dd {
+		display: inline;
+	}
+}
