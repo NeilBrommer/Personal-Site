@@ -14,7 +14,7 @@
     }
   },
   "environment" : {
-    "BUILD_DRAFTS" : "false"
+    "BUILD_DRAFTS" : "true"
   },
   "openLogOnRun" : "fail",
   "persistent" : true

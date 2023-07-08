@@ -1,4 +1,5 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const eleventySyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const eleventySass = require("eleventy-sass");
 const mdDefList = require("markdown-it-deflist");
 
@@ -7,10 +8,13 @@ module.exports = function (eleventyConfig) {
 		files: "./_site/css/**/*.css",
 	});
 	eleventyConfig.addPassthroughCopy({
+		"node_modules/prismjs/themes/prism.min.css": "css/prism.min.css",
+		"node_modules/prismjs/themes/prism-tomorrow.min.css": "css/prism-tomorrow.min.css",
 		"node_modules/feather-icons/dist/feather-sprite.svg": "images/feather-sprite.svg",
 		"src/js/site.js": "js/site.js"
 	});
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);
+	eleventyConfig.addPlugin(eleventySyntaxHighlight);
 	eleventyConfig.addPlugin(eleventySass, {
 		sass: {
 			loadPaths: ["node_modules"],
@@ -41,9 +45,7 @@ module.exports = function (eleventyConfig) {
 		collection.sort((a, b) => a.data.sectionOrder - b.data.sectionOrder)
 	);
 	eleventyConfig.addFilter("filterDrafts", collection => {
-		if (process.env.BUILD_DRAFTS === true) {
-			console.log("Skipping filtering drafts");
-
+		if (process.env.BUILD_DRAFTS) {
 			return collection;
 		}
 

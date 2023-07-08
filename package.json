@@ -14,11 +14,13 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "eleventy-sass": "^2.2.3",
     "markdown-it-deflist": "^2.1.0"
   },
   "dependencies": {
     "feather-icons": "^4.29.0",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "prismjs": "^1.29.0"
   }
 }

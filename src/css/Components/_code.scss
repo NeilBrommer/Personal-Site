@@ -17,3 +17,17 @@ code {
 	border: solid 1px var(--primary-border-color);
 	border-radius: calc(var(--main-border-radius) / 2);
 }
+
+pre {
+	background: var(--code-background);
+	padding: 1em;
+	border: solid 1px var(--primary-border-color);
+	border-radius: calc(var(--main-border-radius) / 2);
+
+	code {
+		background: unset;
+		padding: unset;
+		border: unset;
+		border-radius: unset;
+	}
+}
