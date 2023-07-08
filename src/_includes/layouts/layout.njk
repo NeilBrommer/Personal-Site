@@ -24,8 +24,8 @@
 					<li {% if section.url == page.url %}class="active"{% endif %}>
 						<a href="/#{{ section.title | slugify }}">
 							{% if section.icon is defined %}
-								<svg class="bi" fill="currentColor" role="img">
-									<use xlink:href="/images/fontawesome/solid.svg#{{ section.icon }}" />
+								<svg class="icon" role="img">
+									<use xlink:href="/images/feather-sprite.svg#{{ section.icon }}" />
 								</svg>
 							{% endif %}
 							{{ section.title }}
@@ -44,8 +44,8 @@
 						<li {% if page.url and page.url.startsWith(standalonePage.url) %}class="active"{% endif %}>
 							<a href="{{ standalonePage.url }}">
 								{% if standalonePage.icon is defined %}
-									<svg class="bi" fill="currentColor" role="img">
-										<use xlink:href="/images/fontawesome/solid.svg#{{ standalonePage.icon }}" />
+									<svg class="icon" role="img">
+										<use xlink:href="/images/feather-sprite.svg#{{ standalonePage.icon }}" />
 									</svg>
 								{% endif %}
 
@@ -60,8 +60,8 @@
 				{% for externalLink in socialLinks %}
 					<li>
 						<a href="{{ externalLink.url }}" title="{{ externalLink.name }}">
-							<svg class="bi" fill="currentColor" role="img">
-								<use xlink:href="/images/fontawesome/brands.svg#{{ externalLink.icon }}" />
+							<svg class="icon" role="img">
+								<use xlink:href="/images/feather-sprite.svg#{{ externalLink.icon }}" />
 							</svg>
 						</a>
 					</li>
@@ -75,8 +75,8 @@
 			{{ title }}
 
 			<button class="sidebar-toggle" onclick="setSidebar()">
-				<svg class="bi" fill="currentColor" role="img" aria-label="Toggle Main Menu">
-					<use xlink:href="/images/bootstrap-icons.svg#layout-sidebar-inset" />
+				<svg class="icon" role="img" aria-label="Toggle Main Menu">
+					<use xlink:href="/images/feather-sprite.svg#sidebar" />
 				</svg>
 			</button>
 		</h1>

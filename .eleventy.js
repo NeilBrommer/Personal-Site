@@ -7,10 +7,7 @@ module.exports = function (eleventyConfig) {
 		files: "./_site/css/**/*.css",
 	});
 	eleventyConfig.addPassthroughCopy({
-		"node_modules/bootstrap-icons/bootstrap-icons.svg":
-			"images/bootstrap-icons.svg",
-		"node_modules/@fortawesome/fontawesome-free/sprites":
-			"images/fontawesome",
+		"node_modules/feather-icons/dist/feather-sprite.svg": "images/feather-sprite.svg",
 		"src/js/site.js": "js/site.js"
 	});
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);

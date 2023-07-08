@@ -2,7 +2,7 @@
 title: Contact
 eleventyNavigation:
   key: Contact
-  icon: envelope
+  icon: mail
   order: 2
 tags: [ "MainPage" ]
 sectionOrder: 2

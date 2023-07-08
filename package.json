@@ -18,8 +18,7 @@
     "markdown-it-deflist": "^2.1.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.4.0",
-    "bootstrap-icons": "^1.10.5",
+    "feather-icons": "^4.29.0",
     "normalize.css": "^8.0.1"
   }
 }

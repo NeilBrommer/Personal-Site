@@ -2,7 +2,7 @@
 title: Resume
 eleventyNavigation:
   key: Resume
-  icon: file-lines
+  icon: file-text
   order: 2
 ---
 
