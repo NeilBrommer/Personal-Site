@@ -49,7 +49,7 @@ module.exports = function (eleventyConfig) {
 		collection.sort((a, b) => a.data.sectionOrder - b.data.sectionOrder)
 	);
 	eleventyConfig.addFilter("filterDrafts", collection => {
-		if (process.env.BUILD_DRAFTS) {
+		if (process.env.BUILD_DRAFTS == true || process.env.BUILD_DRAFTS == null) {
 			return collection;
 		}
 
