@@ -52,7 +52,7 @@ nav.navbar {
 	width: var(--sidebar-width);
 	height: 100%;
 	padding: 1rem;
-	overflow: scroll;
+	overflow: auto;
 
 	ul {
 		display: flex;
