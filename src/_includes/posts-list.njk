@@ -14,6 +14,19 @@
 						{{ post.date.toLocaleDateString("en-US") }}
 					</dd>
 				</dl>
+				<dl class="tags">
+					<dt>
+						<svg class="icon">
+							<use href="/images/feather-sprite.svg#tag" />
+						</svg>
+						Tags
+					</dt>
+					{% for tag in post.data.tags %}
+						{% if tag != "posts" %}
+							<dd><a href="{{ "/posts/tags/" + (tag | slugify) | url }}">{{ tag }}</a></dd>
+						{% endif %}
+					{% endfor %}
+				</dl>
 			</div>
 			<p>{{ post.data.description }}</p>
 		</section>
