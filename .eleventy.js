@@ -8,8 +8,10 @@ module.exports = function (eleventyConfig) {
 		files: "./_site/css/**/*.css",
 	});
 	eleventyConfig.addPassthroughCopy({
-		"node_modules/prismjs/themes/prism.min.css": "css/prism.min.css",
-		"node_modules/prismjs/themes/prism-tomorrow.min.css": "css/prism-tomorrow.min.css",
+		"node_modules/prism-themes/themes/prism-material-light.min.css":
+			"css/prism-material-light.min.css",
+		"node_modules/prism-themes/themes/prism-material-oceanic.min.css":
+			"css/prism-material-oceanic.min.css",
 		"node_modules/feather-icons/dist/feather-sprite.svg": "images/feather-sprite.svg",
 		"src/js/site.js": "js/site.js"
 	});
