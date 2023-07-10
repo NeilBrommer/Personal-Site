@@ -2,21 +2,25 @@
 	margin-bottom: 2rem;
 }
 
+h2 {
+	margin-bottom: 0.15em;
+}
+
 .postMetadata {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	column-gap: 2em;
+	align-items: center;
+	column-gap: 2rem;
 
 	font-size: 0.8rem;
-}
 
-dl.postDate, dl.tags {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-
-	margin: 0;
+	div {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		column-gap: 1em;
+	}
 
 	dt {
 		display: inline-flex;
@@ -32,5 +36,9 @@ dl.postDate, dl.tags {
 		&::after {
 			content: ":";
 		}
+	}
+
+	dd {
+		margin: 0;
 	}
 }

@@ -24,7 +24,7 @@ body {
 
 	@media (min-width: #{variables.$sidebar-breakpoint}) {
 		display: flex;
-		gap: 2rem;
+		gap: 1rem;
 		justify-content: center;
 	}
 }
