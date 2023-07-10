@@ -35,3 +35,13 @@ pre {
 .token.keyword {
 	font-style: normal;
 }
+
+code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection {
+	background: Highlight;
+	color: HighlightText;
+}
+
+code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection {
+	background: Highlight;
+	color: HighlightText;
+}
