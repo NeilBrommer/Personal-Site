@@ -1,0 +1,36 @@
+.posts-list-post {
+	margin-bottom: 2rem;
+}
+
+.postMetadata {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 2em;
+
+	font-size: 0.8rem;
+}
+
+dl.postDate, dl.tags {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	margin: 0;
+
+	dt {
+		display: inline-flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 0.25em 0;
+
+		.icon {
+			font-size: 1.5em;
+			padding-right: 0.3em;
+		}
+
+		&::after {
+			content: ":";
+		}
+	}
+}

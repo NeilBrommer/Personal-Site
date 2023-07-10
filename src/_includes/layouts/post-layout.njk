@@ -2,18 +2,31 @@
 layout: layouts/layout.njk
 ---
 
-<dl class="tags">
-	<dt>
-		<svg class="icon">
-			<use href="/images/feather-sprite.svg#tag" />
-		</svg>
-		Tags
-	</dt>
-	{% for tag in tags %}
-		{% if tag != "posts" %}
-			<dd><a href="{{ "/posts/tags/" + (tag | slugify) | url }}">{{ tag }}</a></dd>
-		{% endif %}
-	{% endfor %}
-</dl>
+<div class="postMetadata">
+	<dl class="postDate">
+		<dt>
+			<svg class="icon">
+				<use href="/images/feather-sprite.svg#clock" />
+			</svg>
+			Posted
+		</dt>
+		<dd>
+			{{ page.date.toLocaleDateString("en-US") }}
+		</dd>
+	</dl>
+	<dl class="tags">
+		<dt>
+			<svg class="icon">
+				<use href="/images/feather-sprite.svg#tag" />
+			</svg>
+			Tags
+		</dt>
+		{% for tag in tags %}
+			{% if tag != "posts" %}
+				<dd><a href="{{ "/posts/tags/" + (tag | slugify) | url }}">{{ tag }}</a></dd>
+			{% endif %}
+		{% endfor %}
+	</dl>
+</div>
 
 {{ content | safe }}
