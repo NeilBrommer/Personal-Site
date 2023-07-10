@@ -6,7 +6,7 @@ pagination:
   alias: tag
   filter: [ all, post, posts, MainPage ]
 eleventyComputed:
-  title: Posts Tagged "{{ tag }}"
+  title: Posts Tagged “{{ tag }}”
 permalink: /posts/tags/{{ tag | slugify }}
 ---
 
