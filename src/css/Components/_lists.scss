@@ -18,15 +18,23 @@ dl {
 }
 
 dl.tags {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
 	dt {
 		display: inline-flex;
 		flex-direction: row;
 		align-items: center;
-		gap: 0.25em;
 		padding: 0.25em 0;
-	}
 
-	dd {
-		display: inline;
+		.icon {
+			font-size: 1.5em;
+			padding-right: 0.3em;
+		}
+
+		&::after {
+			content: ":";
+		}
 	}
 }

@@ -11,7 +11,7 @@ layout: layouts/layout.njk
 	</dt>
 	{% for tag in tags %}
 		{% if tag != "posts" %}
-			<dd>{{ tag }}</dd>
+			<dd><a href="{{ "/posts/tags/" + (tag | slugify) | url }}">{{ tag }}</a></dd>
 		{% endif %}
 	{% endfor %}
 </dl>

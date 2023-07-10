@@ -1,0 +1,16 @@
+{% if postsList | filterDrafts | IsNotPage(page.url) | length %}
+	{% for post in postsList | filterDrafts | reverse %}
+		<section>
+			<h2><a href={{ post.url }}>{{ post.data.title }}</a></h2>
+			<div>
+				<svg class="icon">
+					<use href="/images/feather-sprite.svg#clock" />
+				</svg>
+				{{ post.date.toLocaleDateString("en-US") }}
+			</div>
+			<p>{{ post.data.description }}</p>
+		</section>
+	{% endfor %}
+{% else %}
+	<p>No posts</p>
+{% endif %}
