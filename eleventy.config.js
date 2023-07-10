@@ -2,6 +2,7 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const eleventySyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const eleventySass = require("eleventy-sass");
 const mdDefList = require("markdown-it-deflist");
+const eleventyRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.setBrowserSyncConfig({
@@ -17,6 +18,7 @@ module.exports = function (eleventyConfig) {
 	});
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);
 	eleventyConfig.addPlugin(eleventySyntaxHighlight);
+	eleventyConfig.addPlugin(eleventyRss);
 	eleventyConfig.addPlugin(eleventySass, {
 		sass: {
 			loadPaths: ["node_modules"],

@@ -13,5 +13,10 @@
 		"name": "LinkedIn",
 		"icon": "linkedin",
 		"url": "https://www.linkedin.com/in/neilbrommer/"
+	},
+	{
+		"name": "RSS Feed",
+		"icon": "rss",
+		"url": "/feed.xml"
 	}
 ]

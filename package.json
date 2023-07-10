@@ -19,6 +19,7 @@
     "markdown-it-deflist": "^2.1.0"
   },
   "dependencies": {
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
     "feather-icons": "^4.29.0",
     "normalize.css": "^8.0.1",
     "prism-themes": "^1.9.0"
