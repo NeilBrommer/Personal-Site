@@ -17,7 +17,7 @@ jobs:
     name: "Deploy To Netlify"
     steps:
       - uses: actions/checkout@v2
-      - run: "pwd"
+      - run: "git log --diff-filter=A --follow -1 --format=%at src/posts/CsPaginationTools.md"
       - uses: jsmrcaga/action-netlify-deploy@v2.0.0
         with:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
