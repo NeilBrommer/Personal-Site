@@ -1,0 +1,10 @@
+@use '_variables';
+
+.table-of-contents {
+	padding-left: 0.5em;
+	padding-right: 1em;
+	border: 1px solid var(--primary-border-color);
+	border-radius: var(--main-border-radius);
+
+	text-transform: capitalize;
+}
