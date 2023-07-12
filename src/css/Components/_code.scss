@@ -19,6 +19,7 @@ code {
 }
 
 pre {
+	font-size: 0.9em;
 	background: var(--code-background);
 	padding: 1em;
 	border: solid 1px var(--primary-border-color);
@@ -29,6 +30,11 @@ pre {
 		padding: unset;
 		border: unset;
 		border-radius: unset;
+	}
+
+	&[class*=language-] {
+		font-size: 0.9em;
+		margin-bottom: 1em;
 	}
 }
 
