@@ -12,6 +12,7 @@ $code-background-color-dark: lighten(variables.$background-color-dark, 5%);
 }
 
 code {
+	font-size: 0.9em;
 	background: var(--code-background);
 	padding: 0.125em 0.25em;
 	border: solid 1px var(--primary-border-color);
