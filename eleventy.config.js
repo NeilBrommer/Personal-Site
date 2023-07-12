@@ -2,6 +2,8 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const eleventySyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const eleventySass = require("eleventy-sass");
 const mdDefList = require("markdown-it-deflist");
+const mdToc = require("markdown-it-table-of-contents");
+const mdAnchor = require("markdown-it-anchor");
 const eleventyRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
@@ -24,7 +26,10 @@ module.exports = function (eleventyConfig) {
 			loadPaths: ["node_modules"],
 		},
 	});
-	eleventyConfig.amendLibrary("md", mdLib => mdLib.use(mdDefList));
+	eleventyConfig.amendLibrary("md", mdLib => mdLib
+		.use(mdDefList)
+		.use(mdToc)
+		.use(mdAnchor));
 
 	eleventyConfig.addFilter("IsNotPage", (collection, url) =>
 		collection.filter(item => item.url != url));
