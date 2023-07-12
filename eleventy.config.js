@@ -28,7 +28,9 @@ module.exports = function (eleventyConfig) {
 	});
 	eleventyConfig.amendLibrary("md", mdLib => mdLib
 		.use(mdDefList)
-		.use(mdToc)
+		.use(mdToc, {
+			includeLevel: [ 1, 2, 3, 4, 5, 6 ]
+		})
 		.use(mdAnchor));
 
 	eleventyConfig.addFilter("IsNotPage", (collection, url) =>
