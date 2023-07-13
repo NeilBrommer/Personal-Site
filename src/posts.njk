@@ -1,0 +1,11 @@
+---
+title: Posts
+layout: layouts/layout.njk
+eleventyNavigation:
+  key: Posts
+  icon: edit-2
+  order: 1
+---
+
+{% set postsList = collections.posts | filterDrafts | IsNotPage(page.url) %}
+{% include "posts-list.njk" %}
