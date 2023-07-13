@@ -24,7 +24,7 @@ pre {
 	background: var(--code-background);
 	padding: 1em;
 	border: solid 1px var(--primary-border-color);
-	border-radius: calc(var(--main-border-radius) / 2);
+	border-radius: var(--main-border-radius);
 
 	code {
 		background: unset;
