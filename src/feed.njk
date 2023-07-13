@@ -19,7 +19,7 @@ metadata:
 	<author>
 		<name>{{ metadata.author.name }}</name>
 	</author>
-	{%- for post in collections.posts | filterDrafts | IsNotPage("/posts/") | reverse %}
+	{%- for post in collections.posts | reverse %}
 		{%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
 		<entry>
 			<title>{{ post.data.title }}</title>

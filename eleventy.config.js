@@ -5,6 +5,7 @@ const mdDefList = require("markdown-it-deflist");
 const mdToc = require("markdown-it-table-of-contents");
 const mdAnchor = require("markdown-it-anchor");
 const eleventyRss = require("@11ty/eleventy-plugin-rss");
+const eleventyDrafts = require("./eleventy.config.drafts");
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.setBrowserSyncConfig({
@@ -21,6 +22,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);
 	eleventyConfig.addPlugin(eleventySyntaxHighlight);
 	eleventyConfig.addPlugin(eleventyRss);
+	eleventyConfig.addPlugin(eleventyDrafts);
 	eleventyConfig.addPlugin(eleventySass, {
 		sass: {
 			loadPaths: ["node_modules"],
@@ -55,19 +57,6 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addFilter("orderBySectionOrder", (collection) =>
 		collection.sort((a, b) => a.data.sectionOrder - b.data.sectionOrder)
 	);
-	eleventyConfig.addFilter("filterDrafts", collection => {
-		if (process.env.BUILD_DRAFTS == true || process.env.BUILD_DRAFTS == null) {
-			return collection;
-		}
-
-		return collection.filter(item => {
-			if (item.data.draft != null) {
-				return !item.data.draft;
-			}
-
-			return true;
-		});
-	});
 	eleventyConfig.addFilter("log", (value) => console.log(value));
 
 	return {

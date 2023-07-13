@@ -7,7 +7,7 @@ eleventyNavigation:
 tags: [ "MainPage" ]
 ---
 
-{% for section in collections.MainPage | filterDrafts | IsNotPage(page.url) | IsMainPageSection | orderBySectionOrder %}
+{% for section in collections.MainPage | IsNotPage(page.url) | IsMainPageSection | orderBySectionOrder %}
 	{% if not loop.first %}
 		<h2 id="{{ section.data.title | slugify }}">{{ section.data.title }}</h2>
 	{% endif %}

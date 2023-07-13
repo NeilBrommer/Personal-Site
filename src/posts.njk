@@ -7,5 +7,5 @@ eleventyNavigation:
   order: 1
 ---
 
-{% set postsList = collections.posts | filterDrafts | IsNotPage(page.url) %}
+{% set postsList = collections.posts %}
 {% include "posts-list.njk" %}

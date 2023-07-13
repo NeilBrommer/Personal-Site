@@ -24,7 +24,7 @@
 	<header>
 		<nav class="navbar" aria-label="Main Menu">
 			<ul class="siteNav">
-				{% for section in collections.MainPage | filterDrafts | eleventyNavigation %}
+				{% for section in collections.MainPage | eleventyNavigation %}
 					<li {% if section.url == page.url %}class="active"{% endif %}>
 						<a href="/#{{ section.title | slugify }}">
 							{% if section.icon is defined %}
@@ -37,7 +37,7 @@
 					</li>
 				{% endfor %}
 
-				{% set standalonePages = collections.all | filterDrafts | IsNotMainPageSection | eleventyNavigation %}
+				{% set standalonePages = collections.all | IsNotMainPageSection | eleventyNavigation %}
 
 				{% if standalonePages | length %}
 
