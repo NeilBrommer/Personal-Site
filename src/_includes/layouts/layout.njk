@@ -19,6 +19,8 @@
 	<link rel="stylesheet" href="{{ '/css/prism-material-light.min.css' }}" media="(prefers-color-scheme: light)">
 	<link rel="stylesheet" href="{{ '/css/prism-material-oceanic.min.css' }}" media="(prefers-color-scheme: dark)">
 	<link rel="stylesheet" href="{{ '/css/site.css' | url }}">
+
+	{% block head %}{% endblock %}
 </head>
 <body>
 	<header>
@@ -89,5 +91,6 @@
 	</main>
 
 	<script type="text/javascript" src="/js/site.js"></script>
+	{% block scripts %}{% endblock %}
 </body>
 </html>
