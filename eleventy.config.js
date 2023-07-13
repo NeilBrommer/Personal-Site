@@ -6,6 +6,7 @@ const mdToc = require("markdown-it-table-of-contents");
 const mdAnchor = require("markdown-it-anchor");
 const eleventyRss = require("@11ty/eleventy-plugin-rss");
 const eleventyDrafts = require("./eleventy.config.drafts");
+const nunjucksDate = require("nunjucks-date");
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.setBrowserSyncConfig({
@@ -35,6 +36,7 @@ module.exports = function (eleventyConfig) {
 		})
 		.use(mdAnchor));
 
+	eleventyConfig.addFilter("date", nunjucksDate);
 	eleventyConfig.addFilter("IsNotPage", (collection, url) =>
 		collection.filter(item => item.url != url));
 	eleventyConfig.addFilter("IsMainPageSection", (collection) => {

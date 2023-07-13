@@ -1,0 +1,30 @@
+---
+permalink: /sitemap.xml
+layout: null
+sitemap:
+  ignore: true
+siteRoot: "https://neilbrommer.com"
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	{%- for item in collections.all %}
+		{%- if (item.data.sitemap.ignore is not defined or item.data.sitemap.ignore == false) and item.url is defined and item.url != false %}
+			<url>
+				<loc>{{ siteRoot }}{{ item.url }}</loc>
+				{%- if item.data.updated -%}
+					<lastmod>{{ item.data.updated | date("YYYY-MM-DD") }}</lastmod>
+				{%- else -%}
+					<lastmod>{{ item.date | date("YYYY-MM-DD") }}</lastmod>
+				{%- endif -%}
+
+				{%- if item.data.sitemap.changefreq -%}
+					<changefreq>{{ item.data.sitemap.changefreq }}</changefreq>
+				{%- endif -%}
+
+				{%- if item.data.sitemap.priority -%}
+					<priority>{{ item.data.sitemap.priority }}</priority>
+				{%- endif -%}
+			</url>
+		{%- endif %}
+	{%- endfor %}
+</urlset>
