@@ -56,9 +56,6 @@ module.exports = function (eleventyConfig) {
 			return true;
 		});
 	});
-	eleventyConfig.addFilter("orderBySectionOrder", (collection) =>
-		collection.sort((a, b) => a.data.sectionOrder - b.data.sectionOrder)
-	);
 	eleventyConfig.addFilter("log", (value) => console.log(value));
 
 	return {
