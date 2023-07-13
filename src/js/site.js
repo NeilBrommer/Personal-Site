@@ -33,7 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	const observer = new IntersectionObserver(entries => {
 		entries.forEach(entry => {
 			const id = entry.target.previousElementSibling.id;
-			const menuListItem = document.querySelector(`nav li a[href="/#${id}"]`).parentElement;
+			const menuListItem = document.querySelector(`nav li a[href="/#${id}"]`)?.parentElement;
+
+			if (menuListItem == null)
+				return;
 
 			if (entry.intersectionRatio > 0) {
 				menuListItem.classList.add("active");
