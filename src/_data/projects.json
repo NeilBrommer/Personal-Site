@@ -1,5 +1,15 @@
 [
   {
+    "name": "Cauldron",
+    "description": "A MacOS application for writing C# scripts",
+    "links": [
+      {
+        "title": "Source Code",
+        "url": "https://github.com/NeilBrommer/Cauldron"
+      }
+    ]
+  },
+  {
     "name": "Start",
     "description": "A new tab page that displays lists of links using the browser’s indexedDB to store all data",
     "links": [
