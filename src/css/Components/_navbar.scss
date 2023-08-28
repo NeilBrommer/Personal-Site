@@ -3,6 +3,7 @@
 
 header {
 	position: fixed;
+	z-index: 100;
 	top: 0;
 	left: calc((var(--sidebar-width) + 2rem) * -1);
 	height: calc(100dvh - 2rem); // Account for margin
