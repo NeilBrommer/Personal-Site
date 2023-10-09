@@ -1,8 +1,8 @@
 [
 	{
-		"name": "GitHub",
-		"icon": "github",
-		"url": "https://github.com/NeilBrommer"
+		"name": "Source Code",
+		"icon": "git-pull-request",
+		"url": "https://source.neilbrommer.com/NeilBrommer"
 	},
 	{
 		"name": "CodePen",
