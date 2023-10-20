@@ -29,7 +29,7 @@
 					{% endfor %}
 				</div>
 			</dl>
-			<p>{{ post.data.description }}</p>
+			<p>{{ post.data.description | renderMarkdown | safe }}</p>
 		</section>
 	{% endfor %}
 {% else %}

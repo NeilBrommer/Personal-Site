@@ -7,6 +7,7 @@ const mdDefList = require("markdown-it-deflist");
 const mdToc = require("markdown-it-table-of-contents");
 const mdAnchor = require("markdown-it-anchor");
 const nunjucksDate = require("nunjucks-date");
+const markdownIt = require("markdown-it");
 
 function addEleventyPlugins(eleventyConfig) {
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -30,6 +31,9 @@ function configureMarkdown(eleventyConfig) {
 }
 
 function addFilters(eleventyConfig) {
+	let md = new markdownIt();
+
+	eleventyConfig.addFilter("renderMarkdown", (mdString) => md.render(mdString));
 	eleventyConfig.addFilter("log", (value) => console.log(value));
 	eleventyConfig.addFilter("date", nunjucksDate);
 	eleventyConfig.addFilter("IsNotPage", (collection, url) =>
