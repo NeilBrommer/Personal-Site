@@ -62,6 +62,7 @@ module.exports = function (eleventyConfig) {
 		files: "./_site/css/**/*.css",
 	});
 
+	eleventyConfig.addPassthroughCopy("src/img");
 	eleventyConfig.addPassthroughCopy({
 		"node_modules/prism-themes/themes/prism-material-light.min.css":
 			"css/prism-material-light.min.css",
