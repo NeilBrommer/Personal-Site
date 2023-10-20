@@ -11,7 +11,7 @@ The `<dl>` element is useful for displaying metadata or a read only version of a
 These are some basic styles to use by default:
 
 <img src="/img/BasicDescriptionList.png" alt="Basic Description List Styles"
-	style="max-width: 200px" />
+	width="186" height="152" />
 
 ```html
 <dl>
@@ -53,7 +53,7 @@ dd + dd {
 This styling will put the `<dt>` elements in one column and the `<dd>` elements into another. This can cause issues on small screens, so it supports breakpoints where it will fall back to the default style.
 
 <img src="/img/ColumnsDescriptionList.png" alt="Side-By-Side Columns Description List Styles"
-	style="max-width: 250px" />
+	width="242" height="153" />
 
 ```html
 <dl class="dl-columns-tablet">
@@ -126,7 +126,7 @@ $wsu-breakpoint-map: (
 You can also mix this with the default stacked style:
 
 <img src="/img/MixedDescriptionList.png" alt="Mixed Description List Styles"
-	style="max-width: 250px" />
+	width="252" height="160" />
 
 ```html
 <dl class="dl-columns-phone">
@@ -148,10 +148,10 @@ You can also mix this with the default stacked style:
 
 ## Index List
 
-This styling is for a list of links with a description. This is particularly useful for index pages that have an actual list of pages.
+This styling is for a list of links with a description. This is particularly useful for index pages that have an actual list of pages:
 
 <img src="/img/IndexDescriptionList.png" alt="Mixed Description List Styles"
-	style="max-width: 250px" />
+	width="261" height="129" />
 
 ```html
 <dl class="index-list">
