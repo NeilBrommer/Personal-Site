@@ -6,6 +6,7 @@ const eleventyDrafts = require("./eleventy.config.drafts");
 const mdDefList = require("markdown-it-deflist");
 const mdToc = require("markdown-it-table-of-contents");
 const mdAnchor = require("markdown-it-anchor");
+const { markdownItImageSize } = require("./markdown-it-image-size");
 const nunjucksDate = require("nunjucks-date");
 const markdownIt = require("markdown-it");
 
@@ -22,12 +23,15 @@ function addEleventyPlugins(eleventyConfig) {
 }
 
 function configureMarkdown(eleventyConfig) {
+	console.log("markdownItImageSize", markdownItImageSize);
+
 	eleventyConfig.amendLibrary("md", mdLib => mdLib
 		.use(mdDefList)
 		.use(mdToc, {
 			includeLevel: [ 1, 2, 3, 4, 5, 6 ]
 		})
-		.use(mdAnchor));
+		.use(mdAnchor)
+		.use(markdownItImageSize));
 }
 
 function addFilters(eleventyConfig) {
