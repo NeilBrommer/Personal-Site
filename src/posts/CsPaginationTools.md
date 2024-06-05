@@ -32,21 +32,11 @@ namespace ASIS.Shared;
 [DataContract(IsReference = true)]
 public class PaginationOptions
 {
-	/// <summary>
-	/// This constructor exists so that MVC can instantiate the object before mapping is contents
-	/// </summary>
-	public PaginationOptions() { }
-
-	public PaginationOptions(int pageNumber, int? resultsPerPage)
-	{
-		this.PageNumber = pageNumber;
-		this.ResultsPerPage = resultsPerPage;
-	}
-
 	private int? _resultsPerPage;
 	private int _pageNumber;
 
 	/// <summary>The number of results per page</summary>
+	/// <remarks><c>null</c> for unlimited</remarks>
 	[DataMember]
 	public int? ResultsPerPage
 	{
@@ -61,9 +51,7 @@ public class PaginationOptions
 		}
 	}
 
-	/// <summary>
-	/// The page number to get
-	/// </summary>
+	/// <summary>The page number to get</summary>
 	/// <remarks>One indexed</remarks>
 	[DataMember]
 	public int PageNumber
@@ -78,7 +66,38 @@ public class PaginationOptions
 			this._pageNumber = value;
 		}
 	}
+
+	/// <summary>
+	/// This constructor exists so that MVC can instantiate the object before mapping is contents
+	/// </summary>
+	public PaginationOptions() { }
+
+	public PaginationOptions(int pageNumber, int? resultsPerPage)
+	{
+		this.PageNumber = pageNumber;
+		this.ResultsPerPage = resultsPerPage;
+	}
 }
+
+/// <summary>
+/// This exists because <see cref="TagHelper"/>s can't be generic, so passing them an actual
+/// <see cref="PaginatedResults{T}"/> wouldn't work
+/// </summary>
+public interface IPaginatedResults
+{
+	public int PageNumber { get; }
+	public int LastPageNumber { get; }
+	public int? ResultsPerPage { get; }
+	public int CurrentPageResultsCount { get; }
+	public int TotalResultsCount { get; }
+	public int FirstResultNumber { get; }
+	public int LastResultNumber { get; }
+	public bool IsFirstPage { get; }
+	public bool IsLastPage { get; }
+	public int PreviousPageNumber { get; }
+	public int NextPageNumber { get; }
+}
+
 
 /// <summary>
 /// An extension of <see cref="PaginationOptions"/> that contains the results from a query and uses
@@ -89,7 +108,7 @@ public class PaginationOptions
 /// </typeparam>
 /// <typeparam name="U">The data type of the results</typeparam>
 [DataContract(IsReference = true)]
-public class PaginatedResults<T> : PaginationOptions where T : class
+public class PaginatedResults<T> : PaginationOptions, IPaginatedResults where T : class
 {
 	[JsonConstructor]
 	public PaginatedResults(int pageNumber, int? resultsPerPage, IEnumerable<T> results,
@@ -118,21 +137,21 @@ public class PaginatedResults<T> : PaginationOptions where T : class
 	/// The number of results on the current page
 	/// </summary>
 	[DataMember]
-	public int? CurrentPageResultsCount { get => this.Results.Count(); }
+	public int CurrentPageResultsCount { get => this.Results.Count(); }
 
 	/// <summary>
 	/// The number of the first result on the current page. This is calculated using
 	/// <see cref="ResultsPerPage"/>, <see cref="PageNumber"/>, and <see cref="TotalResults"/>.
 	/// </summary>
 	[DataMember]
-	public int? FirstResultNumber
+	public int FirstResultNumber
 	{
 		get
 		{
 			if (this.ResultsPerPage is null)
 				return 1;
 
-			return (this.ResultsPerPage * (this.PageNumber - 1)) + 1;
+			return ((int)this.ResultsPerPage * (this.PageNumber - 1)) + 1;
 		}
 	}
 
@@ -141,14 +160,14 @@ public class PaginatedResults<T> : PaginationOptions where T : class
 	/// <see cref="ResultsPerPage"/>, <see cref="PageNumber"/>, and <see cref="TotalResults"/>.
 	/// </summary>
 	[DataMember]
-	public int? LastResultNumber
+	public int LastResultNumber
 	{
 		get
 		{
 			if (this.ResultsPerPage is null)
 				return this.Results.Count();
 
-			return (this.ResultsPerPage * (this.PageNumber - 1)) + this.CurrentPageResultsCount;
+			return ((int)this.ResultsPerPage * (this.PageNumber - 1)) + this.CurrentPageResultsCount;
 		}
 	}
 
@@ -157,15 +176,14 @@ public class PaginatedResults<T> : PaginationOptions where T : class
 	/// <see cref="TotalResultsCount"/>
 	/// </summary>
 	[DataMember]
-	public int? LastPageNumber
+	public int LastPageNumber
 	{
 		get
 		{
 			if (this.ResultsPerPage is null)
 				return 1;
 
-			return (int)Math.Ceiling(this.TotalResultsCount
-				/ (double)this.ResultsPerPage);
+			return (int)Math.Ceiling(this.TotalResultsCount / (double)this.ResultsPerPage);
 		}
 	}
 
